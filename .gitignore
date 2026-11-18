@@ -1,0 +1,65 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials/
+
+# Airflow
+airflow.cfg
+airflow.db
+airflow-webserver.pid
+airflow-scheduler.pid
+airflow-scheduler.err
+logs/
+airflow/logs/
+
+# Generated datasets
+data/incoming/*.csv
+data/reporting/incoming/*.csv
+data/bronze/
+data/silver/
+data/gold/
+
+# Temporary files
+*.tmp
+*.log
+*.swp
+*.bak
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+*.sublime-workspace
+
+# Docker / local runtime
+.docker/
+docker-data/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+Desktop.ini
