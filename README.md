@@ -60,3 +60,7 @@ One day by hand: trigger with config `{"run_date": "2026-09-15"}`.
 
 ## Evidence to attach
 Grid view after the backfill (all green) and the `reconcile` task log of each day.
+<img width="1911" height="890" alt="completed_dag_backfills" src="https://github.com/user-attachments/assets/22967ca1-ed0d-4e41-9ea1-eb22f4ed7d92" />
+<img width="1066" height="718" alt="retail_daily-graph" src="https://github.com/user-attachments/assets/23e443d4-e34e-4707-ab20-93f95a7a04c8" />
+
+
