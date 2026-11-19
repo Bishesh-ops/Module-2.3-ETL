@@ -55,7 +55,11 @@ def _files_arrived(**context):
     tags=["assignment-2.3"],
 )
 def retail_daily():
-
+    # @task            
+    # def debug_context(**context):
+    #     print("Logical date:", context["logical_date"])
+    #     print("DAG run conf:", context["dag_run"].conf)
+    #     print("Params:", context["params"])
     @task
     def init_tables():
         loader = open_loader()
@@ -65,6 +69,7 @@ def retail_daily():
             ):
                 loader.execute(stmt)
         init_db.ensure_stg(loader)
+
 
     wait = PythonSensor(
         task_id="wait_for_files",
@@ -118,6 +123,7 @@ def retail_daily():
 
     ingested = ingest_file.expand(key=KEYS)
 
+    # debug_context() >> 
     init_tables() >> wait >> ingested
 
     with TaskGroup("silver") as silver:
@@ -142,3 +148,4 @@ def retail_daily():
 
 
 retail_daily()
+
